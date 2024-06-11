@@ -8,9 +8,9 @@
               <div class="hidden md:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="/php-site" class="<?= urlIs('/php-site/') ? 'bg-gray-900 text-white ' : "text-gray-300 "?>rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
-                  <a href="/php-site/about.php" class="<?= $_SERVER['REQUEST_URI'] === '/php-site/about.php' ? 'bg-gray-900 text-white ' : "text-gray-300 "?>rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
-                  <a href="/php-site/contact.php" class="<?= $_SERVER['REQUEST_URI'] === '/php-site/contact.php' ? 'bg-gray-900 text-white ' : "text-gray-300 "?>rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                  <a href="/" class="<?= urlIs('/') ? 'bg-gray-900 text-white ' : "text-gray-300 "?>rounded-md px-3 py-2 text-sm font-medium hover:bg-gray-700 hover:text-white" aria-current="page">Home</a>
+                  <a href="/about" class="<?= urlIs('/about') ? 'bg-gray-900 text-white ' : "text-gray-300 "?>rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Us</a>
+                  <a href="/contact" class="<?= urlIs('/contact') ? 'bg-gray-900 text-white ' : "text-gray-300 "?>rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
                 </div>
               </div>
             </div>
