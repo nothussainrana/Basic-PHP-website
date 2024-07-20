@@ -7,7 +7,7 @@ use Core\App;
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// validate the form
+$errors = [];
 if (!Validator::email($email)) {
     $errors['email'] = 'Please provide a valid email address';
 }
@@ -34,15 +34,11 @@ if ($user) {
         'email' => $email,
         'password' => password_hash($password, PASSWORD_DEFAULT)
     ]);
-    // mark that the user has logged in.
-    $_SESSION['user'] = [
-        'email' => $email,
-    ];
+
+    login([
+        'email' => $email
+    ]);
 
     header('location: /');
     exit();
 }
-
-// check if the email exists
-    // if yes, redirect to a login page
-    // if no, save one to the database, and then log the user in, and redirect
