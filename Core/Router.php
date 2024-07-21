@@ -1,7 +1,5 @@
 <?php
 namespace Core;
-use Core\Middleware\Auth;
-use Core\Middleware\Guest;
 use Core\Middleware\Middleware;
 
 class Router {
@@ -43,6 +41,12 @@ class Router {
 
         return $this;
     }
+
+    public function previousUrl()
+    {
+        return redirect($_SERVER['HTTP_REFERER']);
+    }
+
     public function route($uri, $method)
     {
         foreach ($this->routes as $route) {
